@@ -14,3 +14,4 @@ jobs:
         phpunit/phpunit:^11.3
         symfony/http-foundation:^7
         moneyphp/money:^4.6.0
+        silverstripe/framework:^6.2
