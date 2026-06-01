@@ -21,7 +21,7 @@
     }
   ],
   "require": {
-    "silverstripe/cms": "^6",
+    "silverstripe/cms": "^6.2",
     "silverstripe/asset-admin": "*",
     "silverstripe/silverstripe-omnipay": "^6.0.0",
     "silvershop/silverstripe-listsorter": "dev-main",
