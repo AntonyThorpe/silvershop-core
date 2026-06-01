@@ -57,7 +57,7 @@ class AccountPage extends Page
 
     protected static function get_if_account_page_exists(): ?DataObject
     {
-        if ($page = DataObject::get_one(self::class)) {
+        if ($page = DataObject::get(self::class)->setUseCache(true)->first()) {
             return $page;
         }
 

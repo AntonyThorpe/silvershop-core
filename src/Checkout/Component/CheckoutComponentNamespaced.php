@@ -28,7 +28,7 @@ class CheckoutComponentNamespaced extends CheckoutComponent
     public function getFormFields(Order $order): FieldList
     {
         $fieldList = $this->proxy->getFormFields($order);
-        $allFields = $fieldList->dataFields();
+        $allFields = $fieldList->getDataFields();
         foreach ($allFields as $allField) {
             $allField->setName($this->namespaceFieldName($allField->getName()));
         }

@@ -91,7 +91,7 @@ class ProductCategory extends Page implements i18nEntityProvider
         $allids = [];
         do {
             $ids = ProductCategory::get()->filter(['ParentID' => $ids])
-                ->getIDList();
+                ->sort(null)->column('ID');
             $allids += $ids;
         } while (!empty($ids));
 

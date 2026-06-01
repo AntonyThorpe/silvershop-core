@@ -327,7 +327,7 @@ class Product extends Page implements Buyable
         }
 
         //additional categories
-        $ids += $this->ProductCategories()->getIDList();
+        $ids += $this->ProductCategories()->sort(null)->column('ID');
 
         return $ids;
     }

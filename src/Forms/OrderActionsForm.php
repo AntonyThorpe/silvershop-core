@@ -244,7 +244,7 @@ class OrderActionsForm extends Form
         $fieldList = $gatewayFieldsFactory->getCardFields();
 
         // Remove all the credit card fields that aren't required by any gateway
-        foreach ($fieldList->dataFields() as $name => $formField) {
+        foreach ($fieldList->getDataFields() as $name => $formField) {
             if ($name && !in_array($name, $allRequired)) {
                 $fieldList->removeByName($name, true);
             }

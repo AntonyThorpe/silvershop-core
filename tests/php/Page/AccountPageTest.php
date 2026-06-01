@@ -195,7 +195,7 @@ final class AccountPageTest extends FunctionalTest
                 $this->logInAs($member);
 
                 // setup a single-country site
-                $siteconfig = DataObject::get_one(SiteConfig::class);
+                $siteconfig = DataObject::get(SiteConfig::class)->setUseCache(true)->first();
                 $siteconfig->AllowedCountries = '["NZ"]';
                 $siteconfig->write();
 
